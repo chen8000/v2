@@ -1,0 +1,54 @@
+@import '../../commonStyle/comSet.scss';
+$timeH:30px;
+
+.viewDatebox{
+    float:right;
+    @include radius(5px);
+    overflow: hidden;
+    @include shadow;
+
+    span,
+    p{
+        float: left;
+        @include lineCenter($timeH);
+        user-select: none;
+    }
+
+    .viewDate{
+        padding:0 15px;
+        color: #868686;
+    }
+
+    span{
+
+        @include wh($timeH, $timeH);
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+            @include bg(#fafafa)
+        }
+
+        &:after{
+            @include afterBlock;
+            @include positionCenter;
+
+            border:8px solid rgba(0,0,0,0);
+            border-right:8px solid #dfdfdf;
+            // left:25%;
+            transform: translate(-75%, -50%);
+        
+        }
+    }
+    .left{
+        border-right:1px solid #dfdfdf;
+    }
+    .right{ 
+        border-left:1px solid #dfdfdf;
+        &:after{
+            border:8px solid rgba(0,0,0,0);
+            border-left:8px solid #dfdfdf;
+            transform: translate(-25%, -50%);
+        }
+    }
+}

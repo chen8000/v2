@@ -1,0 +1,39 @@
+
+@import '../../commonStyle/comSet.scss';
+
+
+.stacked{
+    
+    @include shadow;
+    padding:40px 15px;
+    box-sizing: border-box;
+    border-radius:5px;
+    margin-top:15px;
+}
+.echarts{
+    @include wh(100%, 500px);
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        @include wh(100%, 200px);
+    }
+}
+.title{
+    position: relative;
+    z-index: 99;
+    margin-bottom:15px;
+    &:after{
+        @include afterClear;
+    }
+    h2{
+        color:$vgcBlue;
+        float: left;
+        font-size:20px;
+
+        /*-------------- 767  phone*/
+        // @media all and (max-width: 767px){
+        //     @include wh(100%);
+        //     margin-bottom:15px;
+        // }
+    }
+
+}

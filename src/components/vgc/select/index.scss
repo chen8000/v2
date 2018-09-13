@@ -1,0 +1,77 @@
+
+@import '../../commonStyle/comSet.scss';
+
+$timeH:30px;
+
+.select{
+    float: right;
+    margin-right: 30px;
+    @include wh(auto, $timeH);
+    line-height:$timeH;
+    @include shadow;
+    cursor: pointer;
+    @include radius(5px);
+
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        margin-right: 15px;
+    }
+
+    .val{
+        padding-left:10px;
+        padding-right: 30px;
+        display: block;
+        position: relative;
+
+        &:after{
+            @include afterBlock;
+            border:6px solid rgba(0,0,0,0);
+            border-top:6px solid #dfdfdf;
+            position: absolute;
+            top:50%;
+            right: 10px;
+            transform: translateY(-25%);
+        }
+    }
+
+    ul{
+        @include wh(100%);
+        // @include boxSizing;
+        text-align: center;
+        margin-left:-1px;
+        list-style:none;
+        margin-top:5px;
+        @include shadow;
+        @include bg(white);
+        border-top:0;
+        @include radius(5px);
+        transform: scale(0);
+
+        li{
+            cursor: pointer;
+            border-bottom:1px solid $hrColor;
+            &:hover{
+                @include bg(rgb(245, 245, 245));
+            }
+
+            &:last-child{
+                border:0;
+            }
+        }
+    }
+    .selectAni{
+        animation: select .3s ease forwards;
+    }
+}
+
+@keyframes select {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

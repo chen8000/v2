@@ -1,0 +1,40 @@
+
+@import '../commonStyle/comSet.scss';
+
+*{padding:0;margin:0;}
+body{
+    @include bg(#f3f3f3)
+}
+.app{
+
+
+    // @include wh(90%);
+    // margin:0 auto;
+
+
+
+    padding:20px;
+    overflow: hidden;
+    @include bg(white);
+}
+
+.twoLayout{
+    &:after{
+        @include afterClear;
+    }
+}
+.topPosts,
+.topUsers{
+    @include wh(calc(50% - 8px));
+    float: left;
+    margin-top:15px;
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        @include wh(100%);
+    }
+}
+.topPosts{
+    float: right;
+}
+
+

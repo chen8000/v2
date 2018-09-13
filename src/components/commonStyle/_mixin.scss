@@ -1,0 +1,102 @@
+
+// 过度
+@mixin transition( $time:.3s, $curve:ease ){
+    transition         : all $time $curve;
+    -webkit-transition : all $time $curve;
+} 
+// 背景颜色
+@mixin bg( $color ){
+    background : $color;
+}
+
+// 背景图片
+@mixin bgImg($url){
+    background:url($url) no-repeat;
+}
+// 伪类块
+@mixin afterBlock($c:''){
+    content:$c;
+    display:block;
+}
+
+// after清除浮动
+@mixin afterClear{
+    @include afterBlock();
+    clear   : both;
+}
+
+// 宽高  可以用 null 占位
+@mixin wh( $w:null, $h:null ){
+    width  : $w ;
+    height : $h ;
+}
+
+// 高 行高 文字上下居中
+@mixin hl($h){
+    height:$h;
+    line-height:$h;
+}
+
+// margin 左右居中
+@mixin marginCenter( $t:0 ){
+    margin:$t auto;
+}
+
+// 定位 上下左右居中  要求父元素有定位属性
+@mixin positionCenter( $type:absolute ){
+    position: $type;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+// 定位左右居中
+@mixin positionLRcenter($type:absolute){
+    position: $type;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+// 定位靠左靠上
+@mixin positionLT($l:0, $t:0){
+    position: absolute;
+    left: $l;
+    top:$t;
+}
+
+// 定位上下居中
+@mixin positionTBcenter($type:absolute){
+    position: $type;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+// 一行文字上下居中
+@mixin lineCenter($h:auto){
+    height: $h;
+    line-height:$h;
+}
+
+// 圆角
+@mixin radius($p:5px){
+    border-radius:$p;
+}
+
+// 超出显示省略号 参数是设置多少行超出
+@mixin clamp($line:1){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+}
+
+// box-sizing
+@mixin boxSizing{
+    box-sizing: border-box;
+}
+
+//  
+@mixin shadow{
+    border:1px solid #dfdfdf;
+    box-shadow:0px 0px 5px #d4d4d4;
+}

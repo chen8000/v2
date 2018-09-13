@@ -1,0 +1,85 @@
+
+@import '../../commonStyle//comSet.scss';
+
+.users{
+    @include radius(5px);
+    @include shadow;
+    overflow: hidden;
+    border:1px solid #dfdfdf;
+    padding: 15px;
+}
+.title{
+    color:$vgcBlue;
+    font-size:20px;
+    padding-left:15px;
+    color:$vgcBlue;
+}
+
+
+.titlebar{
+    padding:15px;
+    border-bottom:1px solid $hrColor;
+    color:$textColor;
+    display: flex;
+    p{
+        display: inline-block;
+        
+        text-align: left;
+        font-size:14px;
+    }
+    p:first-child{
+        flex:3;
+        padding-right:15px;
+        /*-------------- 992 pad*/
+        @media all and (max-width: 992px){
+            flex:4;
+        }
+    }
+    p:last-child{
+        flex:1;
+        /*-------------- 992 pad*/
+        @media all and (max-width: 992px){
+            flex:2;
+        }
+    }
+}
+.usersbox{
+    max-height: 255px;  
+    // overflow:scroll;
+    padding:15px 0;
+    color:$textColor;
+    // -webkit-overflow-scrolling: touch;
+    ul{
+        list-style: none;
+
+        li{
+            padding:15px;
+            padding-top:0;
+            display: flex;
+            p{
+                display: inline-block;
+                text-align: left;
+                font-size:15px;
+                @include lineCenter(30px);
+                @include clamp;
+            }
+            p:first-child{
+                flex:3;
+                padding-right:15px;
+                /*-------------- 992 pad*/
+                @media all and (max-width: 992px){
+                    flex:4;
+                }
+            }
+            p:last-child{
+                flex:1;
+                /*-------------- 992 pad*/
+                @media all and (max-width: 992px){
+                    flex:2;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,92 @@
+
+@import '../../commonStyle/comSet.scss';
+
+.title{
+    margin-bottom:20px;
+    font-size:25px;
+    font-weight: 500;
+    color:$vgcBlue;
+
+}
+.mintitle{
+    font-weight: 500;
+    font-size:20px;
+    color:$vgcBlue;
+}
+
+.chart_page{
+    width: 90%;
+    margin:0 auto;
+    padding:20px;
+    background:white;
+    overflow: hidden;
+}
+.textColor{
+    color:#1b4663;
+
+}
+.chart_title{
+    margin-bottom:20px;
+    font-size:25px;
+    font-weight: 500;
+}
+.chart_mintitle{
+    font-weight: 500;
+    font-size:20px;
+}
+.textView{
+    font-size:0;
+    padding: 15px 0;
+}
+.textView li{
+    width: 25%;
+    font-size:16px;
+    list-style:none;
+    display: inline-block;
+    box-sizing: border-box;
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        width: 50%;
+    }
+    
+}
+/* 数字显示布局 */
+.textView{
+    width: calc(100% + 30px);
+    margin-left:-30px;
+
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        width: calc(100% + 15px);
+        margin-left:-15px;
+    }
+}
+.textView li{
+    padding-left:30px;
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        padding-left:15px;
+        margin-bottom:15px;
+    }
+}
+
+.viewLayout{
+    border: 1px solid #dfdfdf;
+    border-radius:5px;
+    overflow: hidden;
+    box-shadow:0px 0px 5px #d4d4d4;
+    padding:25px 15px;
+}
+
+.viewTitle{
+    font-size:17px;
+    color:$vgcBlue;
+}
+.viewNum{
+    font-size:60px;
+    color:$vgcBlue;
+}
+.viewDes{
+    font-size:14px;
+    color:rgb(121, 121, 121);
+}

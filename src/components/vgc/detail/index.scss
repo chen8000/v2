@@ -1,0 +1,39 @@
+
+@import '../../commonStyle/comSet.scss';
+
+$timeH:30px;
+
+.charts{
+    @include wh(100%, 500px);
+    @include shadow;
+    padding:40px 15px;
+    box-sizing: border-box;
+    border-radius:5px;
+
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        @include wh(100%, 300px);
+    }
+}
+
+.titleBar{
+    margin-bottom:15px;
+
+    &:after{
+        @include afterClear;
+    }
+}
+.title{
+    float: left;
+    /*-------------- 767  phone*/
+    @media all and (max-width: 767px){
+        display: block;
+        @include wh(100%);
+        margin-bottom:15px;
+    }
+}
+
+.title{
+    color:$vgcBlue;
+    font-size:20px;
+}
