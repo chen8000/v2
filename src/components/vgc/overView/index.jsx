@@ -28,8 +28,9 @@ class OverView extends Component {
         fetch(OverViewTitleJson)
             .then(res => res.json())
             .then(res => {
-                
-                this.setState({ title:res })
+                let { title } = this.state
+                title = res.name
+                this.setState({ title })
             })    
     }
     

@@ -7,16 +7,16 @@ export const renderCharts = (obj, { xNum, VCICData }) => {
     let Charts = echarts.init(obj)
         Charts.setOption({
             title: {
-                text: ' Page View By Company',
+                text: ' Page View By Site',
                 textStyle:{
                     color:'#1b4663'
                 }
             },
-            legend: {
-                data:['VCIC'],
-                icon: 'circle',
-                right:'3%'
-            },
+            // legend: {
+            //     data:['VCIC'],
+            //     icon: 'circle',
+            //     right:'3%'
+            // },
             grid: {
                 left: '1%',
                 right: '1%',

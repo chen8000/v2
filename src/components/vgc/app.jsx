@@ -94,12 +94,12 @@ class App extends Component {
                 <div className={style.twoLayout}>
                     {/* topUsers */}
                     <div className={style.topUsers}>
-                        <TopPosts res={topPosts}/>
+                        <TopUsers res={topUsers}/> 
                     </div>
 
                     {/* topPosts */}
                     <div className={style.topPosts}>
-                        <TopUsers res={topUsers}/> 
+                        <TopPosts res={topPosts}/>
                     </div>
                 </div>
                 

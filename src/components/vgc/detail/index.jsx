@@ -61,7 +61,7 @@ class Detail extends Component {
 
             let { VCICData } = this.state
 
-            VCICData = res
+            VCICData = res.data
             // console.log(res)
             this.setState({ VCICData })
         })
